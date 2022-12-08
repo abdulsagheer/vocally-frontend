@@ -1,0 +1,69 @@
+@import "styles/mediaQuery";
+
+.container {
+  background-color: #10141b;
+  display: flex;
+  flex-direction: row;
+
+  @include mq400px {
+    flex-direction: column-reverse;
+  }
+
+  .left {
+    padding: 50px;
+
+    @include mq400px {
+      padding: 8px;
+
+      img {
+        height: 400px;
+        width: 320px;
+      }
+    }
+  }
+
+  .right {
+    margin-top: 100px;
+    padding: 50px;
+    line-height: 30px;
+
+    @include mq400px {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .Heading {
+      line-height: 40px;
+      font-size: 40px;
+      padding-bottom: 10px;
+
+      @include mq400px {
+        line-height: 40px;
+        font-size: 35px;
+        padding-bottom: 15px;
+      }
+    }
+
+    .subHeading {
+      font-weight: 100;
+      color: #5b6168;
+      padding-bottom: 20px;
+    }
+    .app {
+      color: #5b6168;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      padding: 8px 18px;
+      border-color: #5b6168;
+      cursor: pointer;
+      background-color: #11151c;
+
+      @include mq400px {
+        padding: 8px 60px;
+      }
+    }
+  }
+}
